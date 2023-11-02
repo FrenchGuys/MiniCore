@@ -1,0 +1,36 @@
+name: MiniCore
+version: 1.0
+api-version: 1.8
+main: me.frenchguys.minicore.Main
+description: MiniCore
+author: FrenchGuys
+discord: https://discord.gg/ZjwruYffD4
+
+commands:
+  heal:
+    description: Heal yourself
+    permission: heal.minicore
+  feed:
+    description: Feed yourself
+    permission: feed.minicore
+  gmc:
+    description: Make yourself in Creative
+    permission: gmc.minicore
+  gms:
+    description: Make yourself in Survival
+    permission: gms.minicore
+  gmsp:
+    description: Make yourself in Spectator
+    permission: gmsp.minicore
+  fly:
+    description: Make yourself Fly
+    permission: fly.minicore
+  id:
+    description: Give the id of the block or the Items in your hands
+    permission: id.minicore
+  discord:
+    description: Give your Discord
+    default: true
+  flyspeed:
+    description: Change the speed of your Fly
+    permission: fly.speed
