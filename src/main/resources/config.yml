@@ -1,0 +1,25 @@
+#Hi, I'm a new developer, the MiniCore will be updated as I learn.
+#If you have any questions or problems, join the discord : https://discord.gg/ZjwruYffD4
+
+messages:
+  heal: "&8[&a&l!!!&8] &a&lYou get healed !" # Permission : heal.minicore
+  feed: "&8[&a&l!!!&8] &a&lYou get Feed !"  # Permission : feed.minicore
+  id: "&8[&a&l!!!&8] &6ID : &e&l%id%" # Permission : id.minicore
+  discord: "&8[&a&l!!!&8] &6Our discord : &e&lhttps://discord.gg/ZjwruYffD4" # Permission : Default
+
+gamemode:
+  gmc: "&8[&a&l!!!&8] &a&lYou are now in &e&lCreative &a&l!" # Permission : gmc.minicore
+  gms: "&8[&a&l!!!&8] &a&lYou are now in &e&lSurvival &a&l!" # Permission : gms.minicore
+  gmsp: "&8[&a&l!!!&8] &a&lYou are now in &e&lSpectator &a&l!" # Permission : gmsp.minicore
+
+fly: #fly.minicore
+  noperm: "&8[&c&l!!!&8] &a&lYou dont have permission"
+  enable: "&8[&a&l!!!&8] &a&lFly enable &a&l!"
+  disable: "&8[&a&l!!!&8] &a&lFly &cdisable &a&l!"
+  flyspeed: "&8[&a&l!!!&8] &a&lYour fly go at &e%speed% &a!"
+  speedless: "&8[&c&l!!!&8] &c&lYou cant go less than 1 !"
+  onlynumber: "&8[&c&l!!!&8] &c&lYou can only use Numbers !"
+
+
+
+
