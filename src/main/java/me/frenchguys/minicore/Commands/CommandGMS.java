@@ -20,6 +20,7 @@ public class CommandGMS implements CommandExecutor {
       Player player = (Player)sender;
 
       if (cmd.getName().equalsIgnoreCase("gms")){
+        if (sender.hasPermission("gms.minicore")) {
 
         player.setGameMode(GameMode.SURVIVAL);
 
@@ -27,6 +28,8 @@ public class CommandGMS implements CommandExecutor {
       }
       return false;
     }
+    return false;
+  }
     return false;
   }
 }

@@ -20,6 +20,7 @@ public class CommandGMC implements CommandExecutor {
       Player player = (Player)sender;
 
       if (cmd.getName().equalsIgnoreCase("gmc")){
+        if (sender.hasPermission("gmc.minicore")) {
 
         player.setGameMode(GameMode.CREATIVE);
 
@@ -27,6 +28,8 @@ public class CommandGMC implements CommandExecutor {
       }
       return false;
     }
+    return false;
+  }
     return false;
   }
 }

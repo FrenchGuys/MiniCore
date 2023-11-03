@@ -20,6 +20,7 @@ public class CommandHeal implements CommandExecutor {
       Player player = (Player)sender;
 
       if (cmd.getName().equalsIgnoreCase("heal")){
+        if (sender.hasPermission("heal.minicore")) {
 
         player.setHealth(20);
 
@@ -27,6 +28,8 @@ public class CommandHeal implements CommandExecutor {
       }
       return false;
     }
+    return false;
+  }
     return false;
   }
 }

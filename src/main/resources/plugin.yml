@@ -7,6 +7,9 @@ author: FrenchGuys
 discord: https://discord.gg/ZjwruYffD4
 
 commands:
+  discord:
+    description: Give your Discord
+    default: true
   heal:
     description: Heal yourself
     permission: heal.minicore
@@ -22,15 +25,18 @@ commands:
   gmsp:
     description: Make yourself in Spectator
     permission: gmsp.minicore
-  fly:
-    description: Make yourself Fly
-    permission: fly.minicore
   id:
     description: Give the id of the block or the Items in your hands
     permission: id.minicore
-  discord:
-    description: Give your Discord
-    default: true
+  fly:
+    description: Make yourself Fly
+    permission: fly.minicore
   flyspeed:
     description: Change the speed of your Fly
     permission: fly.speed
+  setlobby:
+    permission: setlobby.minicore
+    description: Set the Lobby of your server !
+  lobby:
+    description: Go to the Lobby !
+    default: true

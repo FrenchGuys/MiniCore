@@ -8,8 +8,10 @@ import me.frenchguys.minicore.Commands.CommandGMC;
 import me.frenchguys.minicore.Commands.CommandGMS;
 import me.frenchguys.minicore.Commands.CommandGMSP;
 import me.frenchguys.minicore.Commands.CommandHeal;
-//import me.frenchguys.minicore.Listeners.BonbonListener;
+// import me.frenchguys.minicore.Listeners.BonbonListener;
 import me.frenchguys.minicore.Commands.CommandPing;
+import me.frenchguys.minicore.Commands.CommandSetLobby;
+import me.frenchguys.minicore.Commands.CommandLobby;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin {
@@ -34,6 +36,8 @@ public class Main extends JavaPlugin {
     getCommand("id").setExecutor(new CommandPing(this));
     getCommand("discord").setExecutor(new CommandDiscord(this));
     getCommand("flyspeed").setExecutor(new CommandFlySpeed(this));
+    getCommand("setlobby").setExecutor(new CommandSetLobby(this));
+    getCommand("lobby").setExecutor(new CommandLobby(this));
 
     //Listeners
 

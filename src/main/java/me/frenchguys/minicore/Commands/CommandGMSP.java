@@ -20,6 +20,7 @@ public class CommandGMSP implements CommandExecutor {
       Player player = (Player)sender;
 
       if (cmd.getName().equalsIgnoreCase("gmsp")){
+        if (sender.hasPermission("gmsp.minicore")) {
 
         player.setGameMode(GameMode.SPECTATOR);
 
@@ -27,6 +28,8 @@ public class CommandGMSP implements CommandExecutor {
       }
       return false;
     }
+    return false;
+  }
     return false;
   }
 }
