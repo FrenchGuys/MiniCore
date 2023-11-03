@@ -1,5 +1,8 @@
 package me.frenchguys.minicore;
 
+import org.bukkit.plugin.java.JavaPlugin;
+
+//Commands
 import me.frenchguys.minicore.Commands.CommandDiscord;
 import me.frenchguys.minicore.Commands.CommandFeed;
 import me.frenchguys.minicore.Commands.CommandFly;
@@ -7,12 +10,10 @@ import me.frenchguys.minicore.Commands.CommandFlySpeed;
 import me.frenchguys.minicore.Commands.CommandGMC;
 import me.frenchguys.minicore.Commands.CommandGMS;
 import me.frenchguys.minicore.Commands.CommandGMSP;
-import me.frenchguys.minicore.Commands.CommandHeal;
-// import me.frenchguys.minicore.Listeners.BonbonListener;
+import me.frenchguys.minicore.Commands.CommandHeal;;
 import me.frenchguys.minicore.Commands.CommandPing;
 import me.frenchguys.minicore.Commands.CommandSetLobby;
 import me.frenchguys.minicore.Commands.CommandLobby;
-import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin {
   @Override
@@ -38,14 +39,6 @@ public class Main extends JavaPlugin {
     getCommand("flyspeed").setExecutor(new CommandFlySpeed(this));
     getCommand("setlobby").setExecutor(new CommandSetLobby(this));
     getCommand("lobby").setExecutor(new CommandLobby(this));
-
-    //Listeners
-
-    // getServer().getPluginManager().registerEvent(new BonbonListener(this), this);
-
-
-    //Task
-
   }
   @Override
   public void onDisable() {
@@ -56,5 +49,4 @@ public class Main extends JavaPlugin {
     System.out.println("------------------------------------------");
 
   }
-
 }
