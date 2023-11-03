@@ -26,6 +26,7 @@ public class Main extends JavaPlugin {
     System.out.println("[MiniCore] https://discord.gg/ZjwruYffD4");
     System.out.println("------------------------------------------");
 
+
     //CMD
 
     getCommand("heal").setExecutor(new CommandHeal(this));
