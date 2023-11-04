@@ -6,10 +6,10 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class CommandPing implements CommandExecutor {
+public class CommandID implements CommandExecutor {
 
   private Main main;
-  public CommandPing(Main main) {
+  public CommandID(Main main) {
     this.main = main;
   }
 

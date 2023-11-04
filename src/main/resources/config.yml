@@ -6,7 +6,7 @@ messages:
   feed: "&8[&a&l!!!&8] &a&lYou get Feed !"  # Permission : feed.minicore
   id: "&8[&a&l!!!&8] &6ID : &e&l%id%" # Permission : id.minicore
   discord: "&8[&a&l!!!&8] &6Our discord : &e&lhttps://discord.gg/ZjwruYffD4" # Permission : Default
-  lobbyset: "&8[&a&l!!!&8] &a&lSuccefully configured the lobby location, is this correct?"
+  lobbyset: "&8[&a&l!!!&8] &a&lSuccefully configured the lobby location, is this correct?" # Permission : setlobby.minicore
   lobbyteleported: "&8[&a&l!!!&8] &a&lSuccefully teleported to the lobby !"
 
 gamemode:
