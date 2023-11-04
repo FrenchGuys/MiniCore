@@ -1,5 +1,5 @@
 name: MiniCore
-version: 1.1
+version: 1.2
 api-version: 1.8
 main: me.frenchguys.minicore.Main
 description: MiniCore
@@ -16,6 +16,9 @@ commands:
   feed:
     description: Feed yourself
     permission: feed.minicore
+  feedheal:
+    description: Feed and Heal yourself
+    permission: feedheal.minicore
   gmc:
     description: Make yourself in Creative
     permission: gmc.minicore

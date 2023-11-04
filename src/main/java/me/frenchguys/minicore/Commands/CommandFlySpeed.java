@@ -37,7 +37,7 @@ public class CommandFlySpeed implements CommandExecutor {
               player.setFlySpeed((float) speed / 10.0F);
               player.sendMessage(main.getConfig().getString("fly.flyspeed").replace("&", "§").replace("%speed%", String.valueOf(speed)));
             } else {
-              player.sendMessage(main.getConfig().getString("fly.speedless").replace("&", "§"));
+              player.sendMessage(main.getConfig().getString("fly.speed").replace("&", "§"));
             }
 
             return true;

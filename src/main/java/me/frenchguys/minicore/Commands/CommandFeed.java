@@ -1,6 +1,5 @@
 package me.frenchguys.minicore.Commands;
 
-import java.security.PrivateKey;
 import me.frenchguys.minicore.Main;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
