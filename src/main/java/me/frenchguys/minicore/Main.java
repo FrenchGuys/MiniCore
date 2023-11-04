@@ -1,6 +1,8 @@
 package me.frenchguys.minicore;
 
 
+import me.frenchguys.minicore.Listener.ClearOnJoin;
+import org.bukkit.Server.Spigot;
 import org.bukkit.plugin.java.JavaPlugin;
 //Commands
 import me.frenchguys.minicore.Commands.CommandDiscord;
@@ -17,6 +19,11 @@ import me.frenchguys.minicore.Commands.CommandSetLobby;
 import me.frenchguys.minicore.Commands.CommandLobby;
 
 public class Main extends JavaPlugin {
+
+  public static Spigot getPlugin() {
+
+    return null;
+  }
 
   @Override
   public void onEnable() {
@@ -43,8 +50,9 @@ public class Main extends JavaPlugin {
     getCommand("setlobby").setExecutor(new CommandSetLobby(this));  // setlobby.minicore
     getCommand("lobby").setExecutor(new CommandLobby(this)); // Default
 
-
+    getServer().getPluginManager().registerEvents(new ClearOnJoin(), this);
   }
+
   @Override
   public void onDisable() {
     System.out.println("------------------------------------------");
@@ -52,7 +60,7 @@ public class Main extends JavaPlugin {
     System.out.println("[MiniCore] Join the discord !");
     System.out.println("[MiniCore] https://discord.gg/ZjwruYffD4");
     System.out.println("------------------------------------------");
-
-  }
-
+    saveConfig();
+   }
 }
+
