@@ -50,6 +50,9 @@ public class Main extends JavaPlugin {
     getCommand("setlobby").setExecutor(new CommandSetLobby(this));  // setlobby.minicore
     getCommand("lobby").setExecutor(new CommandLobby(this)); // Default
 
+
+    //Listener
+
     getServer().getPluginManager().registerEvents(new ClearOnJoin(), this);
   }
 

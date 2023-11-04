@@ -21,5 +21,4 @@ public class ClearOnJoin implements Listener {
     player.setFlySpeed((float) speed / 10.0F);
 
   }
-
 }
