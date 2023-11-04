@@ -16,12 +16,11 @@ public class CommandFeed implements CommandExecutor {
 
   @Override
   public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-    if (sender instanceof Player) {
+          if (sender instanceof Player) {
+          Player player = (Player) sender;
 
-      Player player = (Player) sender;
-
-      if (cmd.getName().equalsIgnoreCase("feed")) {
-        if (sender.hasPermission("feed.minicore")) {
+          if (cmd.getName().equalsIgnoreCase("feed")) {
+          if (sender.hasPermission("feed.minicore")) {
 
           player.setFoodLevel(20);
 

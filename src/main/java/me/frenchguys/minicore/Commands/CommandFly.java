@@ -15,29 +15,27 @@ public class CommandFly implements CommandExecutor {
 
   @Override
   public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-    if (sender instanceof Player) {
+          if (sender instanceof Player) {
+          Player player = (Player) sender;
 
-      Player player = (Player) sender;
+          if (cmd.getName().equalsIgnoreCase("fly"));
 
-      if (cmd.getName().equalsIgnoreCase("fly"));
+          if (!player.hasPermission("fly.minicore")) {
+          player.sendMessage(main.getConfig().getString("fly.noperm").replace("&", "§"));
+          return true;
+          } else {
 
-      if (!player.hasPermission("fly.minicore")) {
-        player.sendMessage(main.getConfig().getString("fly.noperm").replace("&", "§"));
-        return true;
-      } else {
-
-        if (player.getAllowFlight() == true) {
+          if (player.getAllowFlight() == true) {
           player.setAllowFlight(false);
           player.sendMessage(main.getConfig().getString("fly.disable").replace("&", "§"));
           return true;
-        }
 
-        if (player.getAllowFlight() == false) {
+          }
+          if (player.getAllowFlight() == false) {
           player.setAllowFlight(true);
           player.sendMessage(main.getConfig().getString("fly.enable").replace("&", "§"));
           return true;
-        }
-
+          }
 
         return false;
       }

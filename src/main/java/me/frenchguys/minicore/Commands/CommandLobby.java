@@ -21,10 +21,10 @@ public class CommandLobby implements CommandExecutor {
 
   @Override
   public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-    if (sender instanceof Player) {
-      Player player = (Player) sender;
+        if (sender instanceof Player) {
+        Player player = (Player) sender;
 
-      if(cmd.getName().equalsIgnoreCase("lobby")) {
+        if(cmd.getName().equalsIgnoreCase("lobby")) {
         int x = main.getConfig().getInt("lobby.Location.X");
         int y = main.getConfig().getInt("lobby.Location.Y");
         int z = main.getConfig().getInt("lobby.Location.Z");
@@ -34,12 +34,9 @@ public class CommandLobby implements CommandExecutor {
         player.teleport(lobbyloc);
         player.sendMessage(main.getConfig().getString("messages.lobbyteleported").replace("&", "§"));
         player.playSound(player.getLocation(), Sound.NOTE_PLING, 1, 1);
-
-
-      }
-
-      return false;
-    }
+            }
+        return false;
+       }
     return false;
   }
 }

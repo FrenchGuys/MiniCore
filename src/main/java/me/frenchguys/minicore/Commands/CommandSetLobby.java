@@ -20,11 +20,11 @@ public class CommandSetLobby implements CommandExecutor {
   @Override
   public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 
-    if (cmd.getName().equalsIgnoreCase("setlobby")) {
-      if (sender instanceof Player) {
+          if (cmd.getName().equalsIgnoreCase("setlobby")) {
+          if (sender instanceof Player) {
 
-        Player player = (Player) sender;
-        if (sender.hasPermission("setlobby.minicore")) {
+          Player player = (Player) sender;
+          if (sender.hasPermission("setlobby.minicore")) {
           Location loc = player.getLocation();
           int x = loc.getBlockX();
           int y = loc.getBlockY();
@@ -39,12 +39,11 @@ public class CommandSetLobby implements CommandExecutor {
           main.saveConfig();
           player.sendMessage(main.getConfig().getString("messages.lobbyset").replace("&", "§"));
           player.sendMessage(ChatColor.GOLD + "x: " + x + " y: " + y + " z: " + z);
-        }
+              }
+          }
+        return false;
       }
-
       return false;
-    }
-    return false;
   }
 }
 

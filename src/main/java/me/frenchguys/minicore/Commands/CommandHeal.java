@@ -15,20 +15,20 @@ public class CommandHeal implements CommandExecutor {
 
   @Override
   public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-    if (sender instanceof Player) {
-      Player player = (Player)sender;
+        if (sender instanceof Player) {
+        Player player = (Player)sender;
 
-      if (cmd.getName().equalsIgnoreCase("heal")){
+        if (cmd.getName().equalsIgnoreCase("heal")){
         if (sender.hasPermission("heal.minicore")) {
 
         player.setHealth(20);
 
         player.sendMessage(main.getConfig().getString("messages.heal").replace("&", "§"));
-      }
-      return false;
-    }
-    return false;
-  }
+           }
+          return false;
+         }
+        return false;
+       }
     return false;
   }
 }

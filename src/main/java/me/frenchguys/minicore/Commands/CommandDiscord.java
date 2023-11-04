@@ -14,11 +14,10 @@ public class CommandDiscord implements CommandExecutor {
 
   @Override
   public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-    if(sender instanceof Player){
+       if(sender instanceof Player){
+       Player player = (Player)sender;
 
-      Player player = (Player)sender;
-
-      if(cmd.getName().equalsIgnoreCase("discord")){
+        if(cmd.getName().equalsIgnoreCase("discord")){
         sender.sendMessage(main.getConfig().getString("messages.discord").replace("&", "§"));
       }
     }

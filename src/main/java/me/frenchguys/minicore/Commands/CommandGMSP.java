@@ -14,21 +14,20 @@ public class CommandGMSP implements CommandExecutor {
   }
   @Override
   public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-    if (sender instanceof Player) {
-
+      if (sender instanceof Player) {
       Player player = (Player)sender;
 
-      if (cmd.getName().equalsIgnoreCase("gmsp")){
+        if (cmd.getName().equalsIgnoreCase("gmsp")){
         if (sender.hasPermission("gmsp.minicore")) {
 
         player.setGameMode(GameMode.SPECTATOR);
 
         player.sendMessage(main.getConfig().getString("gamemode.gmsp").replace("&", "§"));
-      }
+            }
+         return false;
+         }
       return false;
-    }
-    return false;
-  }
+      }
     return false;
   }
 }

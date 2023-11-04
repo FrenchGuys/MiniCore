@@ -15,16 +15,15 @@ public class CommandID implements CommandExecutor {
 
   @Override
   public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-    if (sender instanceof Player) {
-      Player player = (Player)sender;
+          if (sender instanceof Player) {
+          Player player = (Player) sender;
 
-      if (cmd.getName().equalsIgnoreCase("id"));
-      {
-        player.sendMessage(main.getConfig().getString("messages.id").replace("&", "§").replace("%id%", String.valueOf(player.getItemInHand().getTypeId())));
-
-      }
+          if (cmd.getName().equalsIgnoreCase("id")) ;
+          {
+            player.sendMessage(main.getConfig().getString("messages.id").replace("&", "§").replace("%id%", String.valueOf(player.getItemInHand().getTypeId())));
+          }
+          return false;
+        }
       return false;
-    }
-    return false;
   }
 }

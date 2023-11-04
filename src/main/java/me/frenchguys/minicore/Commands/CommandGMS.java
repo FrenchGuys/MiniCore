@@ -14,21 +14,20 @@ public class CommandGMS implements CommandExecutor {
   }
   @Override
   public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-    if (sender instanceof Player) {
+        if (sender instanceof Player) {
+        Player player = (Player)sender;
 
-      Player player = (Player)sender;
-
-      if (cmd.getName().equalsIgnoreCase("gms")){
+        if (cmd.getName().equalsIgnoreCase("gms")){
         if (sender.hasPermission("gms.minicore")) {
 
         player.setGameMode(GameMode.SURVIVAL);
 
         player.sendMessage(main.getConfig().getString("gamemode.gms").replace("&", "§"));
-      }
-      return false;
-    }
-    return false;
-  }
+          }
+       return false;
+       }
+     return false;
+     }
     return false;
   }
 }
