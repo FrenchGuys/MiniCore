@@ -17,17 +17,20 @@ public class CommandHealFeed implements CommandExecutor {
   @Override
   public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 
-      Player player = (Player)sender;
+      Player player =(Player) sender;
 
       if(cmd.getName().equalsIgnoreCase("feedheal")){
-      if(player.hasPermission("feedheal.minicore")){
+          if(player.hasPermission("feedheal.minicore")){
+              player.setFoodLevel(20);
+              player.sendMessage(main.getConfig().getString("messages.feedheal").replace("&", "§"));
+          } else {
+              player.sendMessage(main.getConfig().getString("messages.noperm").replace("&", "§"));
+          }
+
 
       }
-      player.setFoodLevel(20);
-      player.setHealth(20);
-      player.sendMessage(main.getConfig().getString("messages.feedheal").replace("&", "§"));
-    }
 
-    return false;
+
+      return false;
   }
 }

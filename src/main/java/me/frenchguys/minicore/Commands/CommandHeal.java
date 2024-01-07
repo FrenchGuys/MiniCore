@@ -13,22 +13,24 @@ public class CommandHeal implements CommandExecutor {
     this.main = main;
   }
 
-  @Override
-  public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-        if (sender instanceof Player) {
-        Player player = (Player)sender;
+    @Override
+    public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 
-        if (cmd.getName().equalsIgnoreCase("heal")){
-        if (sender.hasPermission("heal.minicore")) {
+        Player player =(Player) sender;
 
-        player.setHealth(20);
+        if(cmd.getName().equalsIgnoreCase("heal")){
+            if(player.hasPermission("heal.minicore")){
+                player.setHealth(20);
+                player.sendMessage(main.getConfig().getString("messages.heal").replace("&", "§"));
 
-        player.sendMessage(main.getConfig().getString("messages.heal").replace("&", "§"));
-           }
-          return false;
-         }
+            } else {
+                player.sendMessage(main.getConfig().getString("messages.noperm").replace("&", "§"));
+            }
+
+
+        }
+
+
         return false;
-       }
-    return false;
-  }
+    }
 }

@@ -21,7 +21,7 @@ public class CommandFly implements CommandExecutor {
           if (cmd.getName().equalsIgnoreCase("fly"));
 
           if (!player.hasPermission("fly.minicore")) {
-          player.sendMessage(main.getConfig().getString("fly.noperm").replace("&", "§"));
+          player.sendMessage(main.getConfig().getString("messages.noperm").replace("&", "§"));
           return true;
           } else {
 

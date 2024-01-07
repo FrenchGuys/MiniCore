@@ -9,6 +9,9 @@ messages:
   id: "&8[&a&l!!!&8] &6ID : &e&l%id%" # Permission : id.minicore
   lobbyset: "&8[&a&l!!!&8] &a&lSuccefully configured the lobby location, is this correct?" # Permission : setlobby.minicore
   lobbyteleported: "&8[&a&l!!!&8] &a&lSuccefully teleported to the lobby !" # Permission : Default
+  noperm: "&7&l[&c&l!!!&7&l] &cYou don't have the permission to use this command."
+  join: "&7&l[&a+&7&l] &a%player%"
+  quit: "&7&l[&c-&7&l] &c%player%"
 
 gamemode:
   gmc: "&8[&a&l!!!&8] &a&lYou are now in &e&lCreative &a&l!" # Permission : gmc.minicore
@@ -16,15 +19,12 @@ gamemode:
   gmsp: "&8[&a&l!!!&8] &a&lYou are now in &e&lSpectator &a&l!" # Permission : gmsp.minicore
 
 fly: # Permssion Fly : fly.minicore || Permssion Speed : fly.speed
-  noperm: "&8[&c&l!!!&8] &a&lYou dont have permission"
   enable: "&8[&a&l!!!&8] &a&lFly enable &a&l!"
   disable: "&8[&a&l!!!&8] &a&lFly &cdisable &a&l!"
   flyspeed: "&8[&a&l!!!&8] &a&lYour fly go at &e%speed% &a!"
   speed: "&8[&c&l!!!&8] &c&lThe max you can go its 5 and the less 1 !"
   onlynumber: "&8[&c&l!!!&8] &c&lYou can only use Numbers !"
 
-#TOUCH THAT IF YOU ARE A ASSHOLE !!!
-lobby:
 
 
 

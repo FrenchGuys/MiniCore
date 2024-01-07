@@ -12,22 +12,25 @@ public class CommandGMS implements CommandExecutor {
   public CommandGMS(Main main) {
     this.main = main;
   }
-  @Override
-  public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+    @Override
+    public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (sender instanceof Player) {
-        Player player = (Player)sender;
+            Player player = (Player) sender;
 
-        if (cmd.getName().equalsIgnoreCase("gms")){
-        if (sender.hasPermission("gms.minicore")) {
+            if (cmd.getName().equalsIgnoreCase("gms")) {
+                if (player.hasPermission("gms.minicore")) {
+                    player.setGameMode(GameMode.CREATIVE);
+                    player.sendMessage(main.getConfig().getString("gamemode.gms").replace("&", "§"));
+                    return true;
+                } else {
+                    player.sendMessage(main.getConfig().getString("messages.noperm").replace("&", "§"));
+                }
+            } else {
+                sender.sendMessage("This command can only be executed by a player.");
+            }
 
-        player.setGameMode(GameMode.SURVIVAL);
+            return false;
+        }            return false;
 
-        player.sendMessage(main.getConfig().getString("gamemode.gms").replace("&", "§"));
-          }
-       return false;
-       }
-     return false;
-     }
-    return false;
-  }
+    }
 }

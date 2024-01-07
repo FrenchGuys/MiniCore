@@ -12,34 +12,55 @@ commands:
     default: true
   heal:
     description: Heal yourself
-    permission: heal.minicore
   feed:
     description: Feed yourself
-    permission: feed.minicore
   feedheal:
     description: Feed and Heal yourself
-    permission: feedheal.minicore
   gmc:
     description: Make yourself in Creative
-    permission: gmc.minicore
   gms:
     description: Make yourself in Survival
-    permission: gms.minicore
   gmsp:
     description: Make yourself in Spectator
-    permission: gmsp.minicore
   id:
     description: Give the id of the block or the Items in your hands
-    permission: id.minicore
+    default: true
   fly:
     description: Make yourself Fly
-    permission: fly.minicore
   flyspeed:
     description: Change the speed of your Fly
-    permission: fly.speed
   setlobby:
-    permission: setlobby.minicore
     description: Set the Lobby of your server !
   lobby:
     description: Go to the Lobby !
     default: true
+
+permissions:
+  permissions.feed:
+    description: Feed your self
+    default: op
+  permissions.heal:
+    description: Heal your self
+    default: op
+  permissions.feedheal:
+    description: Feed & Feed your self
+    default: op
+  permissions.fly:
+    description: Fly
+    default: op
+  permissions.gmc:
+    description: Gamemode C
+    default: op
+  permissions.gms:
+    description: Gamemode S
+    default: op
+  permissions.gmsp:
+    description: Gamemode Specatro
+    default: op
+  permissions.flyspeed:
+    description: Fly speed
+    default: op
+  permissions.setlobby:
+    description: Set the lobby
+    default: op
+

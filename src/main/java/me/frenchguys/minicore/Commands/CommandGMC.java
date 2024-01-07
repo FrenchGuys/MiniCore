@@ -8,26 +8,31 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 public class CommandGMC implements CommandExecutor {
-  private Main main;
-  public CommandGMC(Main main) {
-    this.main = main;
-  }
-  @Override
-  public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+    private Main main;
+
+    public CommandGMC(Main main) {
+        this.main = main;
+    }
+
+    @Override
+    public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (sender instanceof Player) {
-        Player player = (Player)sender;
+            Player player = (Player) sender;
 
-        if (cmd.getName().equalsIgnoreCase("gmc")){
-        if (sender.hasPermission("gmc.minicore")) {
+            if (cmd.getName().equalsIgnoreCase("gmc")) {
+                if (player.hasPermission("gmc.minicore")) {
+                    player.setGameMode(GameMode.CREATIVE);
+                    player.sendMessage(main.getConfig().getString("gamemode.gmc").replace("&", "§"));
+                    return true;
+                } else {
+                    player.sendMessage(main.getConfig().getString("messages.noperm").replace("&", "§"));
+                }
+            } else {
+                sender.sendMessage("This command can only be executed by a player.");
+            }
 
-        player.setGameMode(GameMode.CREATIVE);
+            return false;
+        }            return false;
 
-        player.sendMessage(main.getConfig().getString("gamemode.gmc").replace("&", "§"));
-        }
-        return false;
-       }
-      return false;
-     }
-    return false;
-  }
+    }
 }
